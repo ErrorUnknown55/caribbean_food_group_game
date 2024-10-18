@@ -5,12 +5,15 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-
-      appBar: AppBar(
-        title: Text('Caribbean Food Group'),
+    return SafeArea(
+      child: Scaffold(
+      
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text('Caribbean Food Group'),
+        ),
+        endDrawer: Drawer(),
       ),
-      endDrawer: Drawer(),
     );
   }
 }
