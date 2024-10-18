@@ -27,7 +27,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   title: "General",
                   children: [
                     _CustomListTile(
-                        title: "Dark Mode",
+                        title: "Theme Mode",
                         icon: Icons.dark_mode_outlined,
                         trailing: Switch(
                             value: _isDark,
@@ -42,22 +42,6 @@ class _SettingsPageState extends State<SettingsPage> {
                     const _CustomListTile(
                         title: "Security Status",
                         icon: CupertinoIcons.lock_shield),
-                  ],
-                ),
-                const Divider(),
-                const _SingleSection(
-                  title: "Organization",
-                  children: [
-                    _CustomListTile(
-                        title: "Profile", icon: Icons.person_outline_rounded),
-                    _CustomListTile(
-                        title: "Messaging", icon: Icons.message_outlined),
-                    _CustomListTile(
-                        title: "Calling", icon: Icons.phone_outlined),
-                    _CustomListTile(
-                        title: "People", icon: Icons.contacts_outlined),
-                    _CustomListTile(
-                        title: "Calendar", icon: Icons.calendar_today_rounded)
                   ],
                 ),
                 const Divider(),

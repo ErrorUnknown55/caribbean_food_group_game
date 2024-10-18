@@ -1,3 +1,4 @@
+import 'package:caribbean_food_group_game/scr/setting_feature/setting_view.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -10,9 +11,10 @@ class HomePage extends StatelessWidget {
       
         appBar: AppBar(
           centerTitle: true,
-          title: Text('Caribbean Food Group'),
+          title: const Text('Caribbean Food Group'),
         ),
-        endDrawer: Drawer(),
+        endDrawer: const Drawer(
+          child: SettingsPage(),),
       ),
     );
   }
