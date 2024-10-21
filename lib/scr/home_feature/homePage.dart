@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
           centerTitle: true,
           title: const Text('Caribbean Food Group'),
         ),
-        endDrawer: const Drawer(child: SettingsView(),),
+        endDrawer: const Drawer(child: SettingsView()),
       ),
     );
   }

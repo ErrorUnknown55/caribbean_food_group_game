@@ -43,9 +43,6 @@ class _SettingsViewState extends State<SettingsView> {
                     const _CustomListTile(
                         title: "Notifications",
                         icon: Icons.notifications_none_rounded),
-                    const _CustomListTile(
-                        title: "Security Status",
-                        icon: CupertinoIcons.lock_shield),
                   ],
                 ),
                 const Divider(),

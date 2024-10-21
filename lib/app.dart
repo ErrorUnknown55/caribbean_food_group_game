@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
                 case HomePage.routeName:
                   return const HomePage();
                 case SettingsView.routeName:
-                  return SettingsView();
+                  return const SettingsView();
                 default:
                   return const HomePage();
               }
