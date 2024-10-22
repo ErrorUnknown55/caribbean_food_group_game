@@ -7,11 +7,15 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: const Text('Caribbean Food Group'),
+          title: Text('Caribbean Food Group',
+            style: theme.textTheme.displaySmall),
+          backgroundColor: Colors.transparent,
         ),
         endDrawer: const Drawer(child: SettingsView()),
       ),

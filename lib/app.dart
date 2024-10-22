@@ -1,5 +1,6 @@
 import 'package:caribbean_food_group_game/scr/home_feature/homePage.dart';
 import 'package:caribbean_food_group_game/scr/setting_feature/setting_view.dart';
+import 'package:caribbean_food_group_game/util/theme.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -12,6 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         restorationScopeId: 'app',
+
+        //This line of code sets the theme for the current widget or component
+        //to the light_theme defined in the appTheme class.
+        theme: appTheme.light_theme,
 
         onGenerateRoute: (RouteSettings routeSettings) {
           return MaterialPageRoute<void>(
