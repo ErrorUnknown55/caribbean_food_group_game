@@ -1,3 +1,4 @@
+import 'package:caribbean_food_group_game/scr/game_feature/game_view.dart';
 import 'package:caribbean_food_group_game/scr/home_feature/homePage.dart';
 import 'package:caribbean_food_group_game/scr/setting_feature/setting_view.dart';
 import 'package:caribbean_food_group_game/util/theme.dart';
@@ -27,6 +28,8 @@ class MyApp extends StatelessWidget {
                   return const HomePage();
                 case SettingsView.routeName:
                   return const SettingsView();
+                case GameView.routeName:
+                  return const GameView();
                 default:
                   return const HomePage();
               }

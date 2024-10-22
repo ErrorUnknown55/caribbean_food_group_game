@@ -8,6 +8,7 @@ class appTheme {
   static ThemeData light_theme = _buildThemeData(
     brightness: Brightness.light,
     primaryColor: colorPalette.shade400,
+    buttonColor: colorPalette.shade200,
     primaryTextColor: colorPalette.shade50,
     secondaryTextColor: colorPalette.shade400,
 
@@ -17,6 +18,7 @@ class appTheme {
   static ThemeData _buildThemeData({
     required Brightness brightness,
     required Color primaryColor,
+    required Color buttonColor,
     required Color primaryTextColor,
     required Color secondaryTextColor,
 
@@ -25,8 +27,19 @@ class appTheme {
       brightness: brightness,
       primaryColor: primaryColor,
       scaffoldBackgroundColor: primaryColor,
+
+      appBarTheme: const AppBarTheme(backgroundColor: Colors.transparent),
+
+      drawerTheme: DrawerThemeData(backgroundColor: colorPalette.shade200),
+
+      //Button theme
+      elevatedButtonTheme: ElevatedButtonThemeData(style: ButtonStyle(
+          foregroundColor: WidgetStateProperty.all(primaryTextColor),
+          backgroundColor: WidgetStateProperty.all(buttonColor)
+      )),
+
       textTheme: _buildTextTheme(primaryTextColor, secondaryTextColor),
-      iconTheme: IconThemeData(color: primaryColor),
+
     );
   }
 
