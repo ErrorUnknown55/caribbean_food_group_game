@@ -1,3 +1,4 @@
+import 'package:caribbean_food_group_game/scr/home_feature/homePage.dart';
 import 'package:caribbean_food_group_game/scr/setting_feature/setting_view.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,10 @@ class _GameViewState extends State<GameView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          leading: IconButton(onPressed: (){}, icon: Icon(Icons.home)),
+          leading: IconButton(onPressed: (){
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => HomePage()));},
+              icon: const Icon(Icons.home)),
       ),
       endDrawer: const SettingsView(),
 

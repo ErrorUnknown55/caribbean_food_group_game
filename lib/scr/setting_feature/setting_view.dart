@@ -6,8 +6,6 @@ class SettingsView extends StatefulWidget {
 
   static const routeName ='/settings';
 
-
-
   @override
   State<SettingsView> createState() => _SettingsViewState();
 }

@@ -39,7 +39,6 @@ class appTheme {
       )),
 
       textTheme: _buildTextTheme(primaryTextColor, secondaryTextColor),
-
     );
   }
 
