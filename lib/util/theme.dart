@@ -38,6 +38,10 @@ class appTheme {
           backgroundColor: WidgetStateProperty.all(buttonColor)
       )),
 
+      iconButtonTheme: IconButtonThemeData(
+        style: ButtonStyle(foregroundColor: WidgetStateProperty.all(buttonColor))
+      ),
+
       textTheme: _buildTextTheme(primaryTextColor, secondaryTextColor),
     );
   }
@@ -47,6 +51,7 @@ class appTheme {
     return TextTheme(
       //Screen tile
       displaySmall: TextStyle(fontWeight: FontWeight.bold, fontSize: 24, color: primaryTextColor),
+      headlineSmall: TextStyle(color: primaryTextColor),
     );
   }
 }

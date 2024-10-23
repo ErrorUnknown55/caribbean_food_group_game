@@ -19,9 +19,10 @@ class _GameViewState extends State<GameView> {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => HomePage()));},
               icon: const Icon(Icons.home)),
+        actions: [
+          IconButton(onPressed: (){}, icon: Icon(Icons.pause))
+        ],
       ),
-      endDrawer: const SettingsView(),
-
     );
   }
 }

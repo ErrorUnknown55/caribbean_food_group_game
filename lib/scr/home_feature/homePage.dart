@@ -34,11 +34,8 @@ class HomePage extends StatelessWidget {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => GameView()));
                       },
-                      // style: ButtonStyle(elevation: MaterialStateProperty(12.0 )),
-                      // style: ElevatedButton.styleFrom(
-                      //     elevation: 12.0,
-                      //     textStyle: const TextStyle(color: Colors.white)),
-                      child: const Text('Start'),
+                      child: Text('Start',
+                      style: theme.textTheme.headlineSmall),
                     ),
                   ),
                 ],
