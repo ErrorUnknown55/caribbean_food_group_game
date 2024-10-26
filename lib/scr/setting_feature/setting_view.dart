@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SettingsView extends StatefulWidget {
@@ -69,7 +68,7 @@ class _CustomListTile extends StatelessWidget {
   final IconData icon;
   final Widget? trailing;
   const _CustomListTile(
-      {super.key, required this.title, required this.icon, this.trailing});
+      {required this.title, required this.icon, this.trailing});
 
   @override
   Widget build(BuildContext context) {
@@ -85,11 +84,8 @@ class _CustomListTile extends StatelessWidget {
 class _SingleSection extends StatelessWidget {
   final String? title;
   final List<Widget> children;
-  const _SingleSection({
-    super.key,
-    this.title,
-    required this.children,
-  });
+
+  const _SingleSection({this.title, required this.children,});
 
   @override
   Widget build(BuildContext context) {

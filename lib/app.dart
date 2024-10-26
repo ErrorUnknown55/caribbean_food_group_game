@@ -1,5 +1,5 @@
 import 'package:caribbean_food_group_game/scr/game_feature/game_view.dart';
-import 'package:caribbean_food_group_game/scr/home_feature/homePage.dart';
+import 'package:caribbean_food_group_game/scr/home_feature/home_page.dart';
 import 'package:caribbean_food_group_game/scr/setting_feature/setting_view.dart';
 import 'package:caribbean_food_group_game/util/theme.dart';
 import 'package:flutter/material.dart';

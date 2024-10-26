@@ -1,5 +1,4 @@
-import 'package:caribbean_food_group_game/scr/home_feature/homePage.dart';
-import 'package:caribbean_food_group_game/scr/setting_feature/setting_view.dart';
+import 'package:caribbean_food_group_game/scr/home_feature/home_page.dart';
 import 'package:flutter/material.dart';
 
 class GameView extends StatefulWidget {
@@ -17,10 +16,10 @@ class _GameViewState extends State<GameView> {
       appBar: AppBar(
           leading: IconButton(onPressed: (){
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => HomePage()));},
+                MaterialPageRoute(builder: (context) => const HomePage()));},
               icon: const Icon(Icons.home)),
         actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.pause))
+          IconButton(onPressed: (){}, icon: const Icon(Icons.pause))
         ],
       ),
     );

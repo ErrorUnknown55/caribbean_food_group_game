@@ -1,6 +1,5 @@
 import 'package:caribbean_food_group_game/scr/game_feature/game_view.dart';
 import 'package:caribbean_food_group_game/scr/setting_feature/setting_view.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -28,11 +27,11 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: EdgeInsets.symmetric(vertical: 10),
+                    padding: const EdgeInsets.symmetric(vertical: 10),
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => GameView()));
+                            MaterialPageRoute(builder: (context) => const GameView()));
                       },
                       child: Text('Start',
                       style: theme.textTheme.headlineSmall),
