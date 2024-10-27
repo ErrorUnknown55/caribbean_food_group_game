@@ -29,10 +29,7 @@ class HomePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 10),
                     child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => const GameView()));
-                      },
+                      onPressed: () => Navigator.popAndPushNamed(context, '/gameview'),
                       child: Text('Start',
                       style: theme.textTheme.headlineSmall),
                     ),
