@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "29584339513",
+    "project_id": "caribbeanfoodgroupgame-77480",
+    "storage_bucket": "caribbeanfoodgroupgame-77480.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29584339513:android:300ff4222ef48361b6d3e8",
+        "android_client_info": {
+          "package_name": "com.example.caribbean_food_group_game"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYc3QiB4F5rxmzA4Akru6WeCpR1DKvuco"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

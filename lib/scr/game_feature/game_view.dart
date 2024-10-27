@@ -20,6 +20,11 @@ class _GameViewState extends State<GameView> {
           IconButton(onPressed: (){}, icon: const Icon(Icons.pause))
         ],
       ),
+      body: const Column(
+        children: <Widget>[
+
+        ],
+      ),
     );
   }
 }
