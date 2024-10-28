@@ -28,7 +28,7 @@ class GameOverView extends StatelessWidget {
             ElevatedButton(
 
               onPressed: () {
-                Navigator.pop(context); // Go back to the game screen
+                Navigator.popAndPushNamed(context, '/homepage'); // Go back to the game screen
               },
               child: const Text(
                 'Return to Home',

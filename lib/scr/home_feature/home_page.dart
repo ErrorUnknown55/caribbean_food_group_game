@@ -1,4 +1,3 @@
-import 'package:caribbean_food_group_game/scr/game_feature/game_view.dart';
 import 'package:caribbean_food_group_game/scr/setting_feature/setting_view.dart';
 import 'package:flutter/material.dart';
 

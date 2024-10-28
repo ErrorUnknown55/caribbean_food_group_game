@@ -280,6 +280,8 @@ class _GameViewState extends State<GameView> {
     shuffledFoodArrays = shuffledMap;
   }
 
+
+  ///Game
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -288,7 +290,11 @@ class _GameViewState extends State<GameView> {
               onPressed: () => Navigator.popAndPushNamed(context, '/homepage'),
               icon: const Icon(Icons.home)),
         actions: [
-          IconButton(onPressed: (){}, icon: const Icon(Icons.pause))
+          IconButton(onPressed: () {
+            pauseGame();
+            showPauseMenu();
+          },
+              icon: const Icon(Icons.pause))
         ],
       ),
       body: WillPopScope(
@@ -311,47 +317,6 @@ class _GameViewState extends State<GameView> {
                   body: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Padding(
-                        padding: EdgeInsets.all(ScrSize.getScreenWidth(context) * 0.015),//Han
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            SizedBox(
-                              width: ScrSize.getScreenWidth(context) * 0.15,
-                              height: ScrSize.getScreenHeight(context) * 0.1,
-                              child: ElevatedButton.icon(
-                                onPressed: () {
-                                  Navigator.pop(context);
-                                },
-                                icon: Icon(Icons.home, size: ScrSize.getScreenWidth(context) * 0.035),
-                                label: const Text(
-                                  'Home',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              width: ScrSize.getScreenWidth(context) * 0.15,
-                              height: ScrSize.getScreenHeight(context) * 0.1,
-                              child: ElevatedButton.icon(
-                                onPressed: () {
-                                  pauseGame();
-                                  showPauseMenu();
-                                },
-                                icon: Icon(Icons.pause_circle, size: ScrSize.getScreenWidth(context) * 0.035),
-                                label: const Text(
-                                  'Pause',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
 
                       //Handles the Points and Time display
                       Padding(
@@ -444,7 +409,6 @@ class _GameViewState extends State<GameView> {
     });
 
     showDialog(context: context, barrierDismissible: false, builder: (BuildContext context) {
-      final spacing = 0.01;
       return WillPopScope(
         onWillPop: () async {
           // Prevent back navigation when the pause menu is visible
