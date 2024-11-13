@@ -21,6 +21,7 @@ class GameShapes {
         ),
 
         Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: shuffledFoodArrays.keys.map((category) {
             return _buildTarget(context, category, onAccept: (data) => onTargetAccept(category, data));
           }).toList(),
@@ -40,18 +41,40 @@ class GameShapes {
 
 
   static Widget _buildShape(BuildContext context, String item, bool isGamePaused, {bool isFeedback = false}) {
-    return Container(
-      width: 50,
-      height: 50,
-      color: isFeedback ? Colors.grey : Colors.blue,
-      child: Center(child: Text(item, style: const TextStyle(color: Colors.white))),
+    return Padding(
+      padding: const EdgeInsets.all(4.0),
+      child: Container(
+        width: 80,
+        height: 80,
+        decoration: BoxDecoration(
+          color: isFeedback ? Colors.black12 : Colors.blue,
+          borderRadius: BorderRadius.circular(18)
+        ),
+        child: Center(child: Text(item,
+            textAlign: TextAlign.center,
+            style: const TextStyle(color: Colors.white)
+        )),
+      ),
     );
   }
 
+  //Displays the different Food Groups for the user to.
   static Widget _buildTarget(BuildContext context, String category, {required void Function(String) onAccept}) {
     return DragTarget<String>(
       builder: (context, candidateData, rejectedData) {
-        return Container(width: 80, height: 80, color: Colors.green, child: Center(child: Text(category)));
+        return Padding(
+          padding: const EdgeInsets.all(6.0),
+          child: Container(
+              width: 100,
+              height: 100,
+              decoration: BoxDecoration(
+                  color: Colors.green,
+                  borderRadius: BorderRadius.circular(16)
+              ),
+              child: Center(child: Text(category)
+              )
+          ),
+        );
       },
       onAccept: onAccept,
     );
