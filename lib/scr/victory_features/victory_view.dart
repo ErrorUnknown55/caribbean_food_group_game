@@ -1,6 +1,7 @@
 import 'package:caribbean_food_group_game/util/scr_size.dart';
 import 'package:flutter/material.dart';
-
+//Victory screen that displays the player's final score and time taken,
+//with options to restart or return to main menu
 class VictoryView extends StatelessWidget {
   final int finalPoints;
   final int timeTaken;
