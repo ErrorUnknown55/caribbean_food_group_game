@@ -6,7 +6,7 @@ class VictoryView extends StatelessWidget {
   final int finalPoints;
   final int timeTaken;
 
-  VictoryView({required this.finalPoints, required this.timeTaken});
+  const VictoryView({super.key, required this.finalPoints, required this.timeTaken});
 
   @override
   Widget build(BuildContext context) {

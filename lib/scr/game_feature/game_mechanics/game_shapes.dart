@@ -1,4 +1,3 @@
-import 'package:caribbean_food_group_game/scr/game_feature/game_mechanics/game_timer.dart';
 import 'package:flutter/material.dart';
 
 class GameShapes {
@@ -13,7 +12,7 @@ class GameShapes {
     return Column(
       children: [
         Text('Points: $points',
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: const TextStyle(color: Colors.white, fontSize: 20),
         ),
 
         /*Text('Points: $',
@@ -91,7 +90,7 @@ class GameShapes {
               child: Text(
                 category,
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16,
+                style: const TextStyle(fontSize: 16,
                     color: Colors.black54, fontWeight: FontWeight.bold),
               ),
             ),
