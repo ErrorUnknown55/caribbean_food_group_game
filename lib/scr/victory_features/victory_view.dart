@@ -1,11 +1,12 @@
 import 'package:caribbean_food_group_game/util/scr_size.dart';
 import 'package:flutter/material.dart';
-
+//Victory screen that displays the player's final score and time taken,
+//with options to restart or return to main menu
 class VictoryView extends StatelessWidget {
   final int finalPoints;
   final int timeTaken;
 
-  VictoryView({required this.finalPoints, required this.timeTaken});
+  const VictoryView({super.key, required this.finalPoints, required this.timeTaken});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class VictoryView extends StatelessWidget {
               color: Colors.yellow,
               size: ScrSize.getScreenWidth(context) / 4,
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             Text(
               'Congratulations!',
               style: TextStyle(
@@ -31,7 +32,7 @@ class VictoryView extends StatelessWidget {
               ),
 
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             Text(
               'Time taken: $timeTaken\'s',
               style: TextStyle(
@@ -39,7 +40,7 @@ class VictoryView extends StatelessWidget {
                   color: Colors.white
               ),
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             Text(
               'You completed the game with $finalPoints points!',
               style: TextStyle(
@@ -47,7 +48,7 @@ class VictoryView extends StatelessWidget {
                   color: Colors.white
               ),
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.green, // Set button background color
@@ -56,7 +57,7 @@ class VictoryView extends StatelessWidget {
                 // You can navigate to the main menu or perform any other action here
                 Navigator.pop(context);
               },
-              child: Text('Return to Main Menu'),
+              child: const Text('Return to Main Menu'),
 
             ),
           ],

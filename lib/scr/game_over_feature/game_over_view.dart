@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
+// Game Over screen that displays the player's final score and
+// options to restart or return to main menu
 class GameOverView extends StatelessWidget {
   final int finalPoints;
+  static const routeName = '/gameover';
 
   GameOverView({required this.finalPoints});
 

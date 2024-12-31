@@ -3,8 +3,11 @@ import 'package:caribbean_food_group_game/scr/game_feature/game_mechanics/game_a
 import 'package:caribbean_food_group_game/scr/game_feature/game_mechanics/game_shapes.dart';
 import 'package:caribbean_food_group_game/scr/game_feature/game_mechanics/game_timer.dart';
 import 'package:caribbean_food_group_game/scr/game_over_feature/game_over_view.dart';
-import 'package:caribbean_food_group_game/scr/victory_features/victory_view.dart';
 import 'package:flutter/material.dart';
+
+// Main game view screen for displaying game elements and managing gameplay
+// logic handles draggable items, targets, timer, points display, pause/resume,
+// dealer offers, and game reset
 
 class GameView extends StatefulWidget {
   const GameView({Key? key}) : super(key: key);
@@ -15,6 +18,8 @@ class GameView extends StatefulWidget {
 }
 
 class _GameViewState extends State<GameView> {
+
+  // Define and initialize game state variables
   late TimerController _timerController;
   int _points = 0;
   bool _gameOver = false;
@@ -22,6 +27,7 @@ class _GameViewState extends State<GameView> {
   bool _isPauseMenuVisible = false;
   Map<String, List<String>> shuffledFoodArrays = {};
 
+  // Initialize shuffled food items list
   @override
   void initState() {
     super.initState();
@@ -29,6 +35,7 @@ class _GameViewState extends State<GameView> {
     _timerController = TimerController(onGameOver: gameOver);
   }
 
+  // Gameplay logic methods for timer, dealer offer, pause, reset, and game over
   void gameOver() {
     Navigator.pushReplacement(
       context,
@@ -72,7 +79,8 @@ class _GameViewState extends State<GameView> {
             icon: const Icon(Icons.pause),
             onPressed: () {
               pauseGame();
-              GameActions.showPauseMenu(context, onResume: resumeGame, onRestart: resetGame);
+              GameActions.showPauseMenu(context,
+                  onResume: resumeGame, onRestart: resetGame);
             },
           ),
         ],
@@ -80,13 +88,8 @@ class _GameViewState extends State<GameView> {
 
       body: AbsorbPointer(
         absorbing: _isGamePaused,
-        child: GameShapes.buildGameBody(
-          context,
-          _points,
-          shuffledFoodArrays,
-          _isGamePaused,
-          onTargetAccept: onTargetAccept,
-        ),
+        child: GameShapes.buildGameBody(context,
+            _points, shuffledFoodArrays, _isGamePaused, onTargetAccept: onTargetAccept),
       ),
     );
   }
